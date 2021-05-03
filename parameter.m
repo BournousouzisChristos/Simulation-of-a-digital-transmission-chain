@@ -39,12 +39,13 @@ gamma = 10;
 %Channel parameters : gain alpha_n, délais tau_n
 N0 = 10;
 alpha_n = 0.8;
-tau_n=Tb*rand(1)/1000;
 SNR = N0/2;
 
 %Ratio Eb/N0 for the receiver
 
 %Parameters for analogic filter : nature, order, ripple, attenuation
-
+fs = 1/Tn;
+BP = ((1+1)/(2*Tb));
+order = 6;
 %Threshold V for the simplified receiver
 
