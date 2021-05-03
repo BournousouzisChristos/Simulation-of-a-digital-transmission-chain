@@ -1,8 +1,10 @@
 %%%Channel%%%
 
 %Add a dead-time tau_n
-delayed = delayseq(channel_input,tau_n);
-
+for i=1:N
+    tau_n=Tb*rand(1)/1000;
+    delayed (:,i) = delayseq(channel_input(:,i),tau_n);
+end 
 %Add a weakening constant alpha_n
 signal = delayed * alpha_n;
 

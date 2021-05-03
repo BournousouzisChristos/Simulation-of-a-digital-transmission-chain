@@ -35,5 +35,5 @@ gain = sqrt(Pt*Zc);
 s = s*gain;
 
 %Interpolation
-channel_input=interpft(sum(s,2),length(s)*gamma);
+channel_input=interpft(s,length(s)*gamma);
 
