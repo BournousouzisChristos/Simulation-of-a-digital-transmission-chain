@@ -33,21 +33,29 @@ title ("Raised-Cosine Filter : Canal 4")
 figure
 t = tiledlayout(2,2);
 nexttile
-plot(s(:,1))
+plot(channel_input(:,1))
 title ("Transmitter Output : Canal 1")
 nexttile
-plot(s(:,2))
+plot(channel_input(:,2))
 title ("Transmitter Output : Canal 2")
 nexttile
-plot(s(:,3))
+plot(channel_input(:,3))
 title ("Transmitter Output : Canal 3")
 nexttile
-plot(s(:,4))
+plot(channel_input(:,4))
 title ("Transmitter Output : Canal 4")
+%%%Plot Channel Output%%%
 figure
-plot(canal_input)
-title ("Transmitter Output : Sum of all channels")
-%%%Canal Output%%%
-figure
-plot(canal_output)
-title("Channel Output")
+t = tiledlayout(2,2);
+nexttile
+plot(channel_output(:,1))
+title ("Channel Output : Canal 1")
+nexttile
+plot(channel_output(:,2))
+title ("Channel Output : Canal 2")
+nexttile
+plot(channel_output(:,3))
+title ("Channel Output : Canal 3")
+nexttile
+plot(channel_output(:,4))
+title ("Channel Output : Canal 4")
